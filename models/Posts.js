@@ -17,19 +17,19 @@ Posts.init(
       allowNull: false,
       references: {
         model: 'profile',
-        foreignKey: 'id'
+        foreignKey: 'profile_id'
       }
     },
     blog_title: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     blog_content: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     blog_comments: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
     },
   },
   {

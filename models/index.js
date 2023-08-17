@@ -2,13 +2,14 @@
 const Profile = require('./Profile');
 const Posts = require('./Posts');
 
+// Profile.belongsToMany(Posts, {
+//   foreignKey: "user_id"
+// })
+
 Posts.belongsToMany(Profile, {
-  foreignKey: "profile_id"
+  through: "profiles_posts"
 })
 
-Profile.belongsToMany(Posts, {
-  foreignKey: "user_id"
-})
 
 module.exports = {
   Profile,
